@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>overall result of students</title>
+</head>
+<body>
+<h2>overall result of students</h2>
+Total number of students   <b>{{length}}</b><br>
+
+<h3>Number of students in each grade</h3>
+<table border="1">
+    <tr>
+        <th>A grade</th>
+        <th>B grade</th>
+        <th>C grade</th>
+        <th>E grade</th>
+        <th>F grade</th>
+    </tr>
+    <tr>
+        <td>{{ a }}</td>
+        <td>{{ b }}</td>
+        <td>{{ c }}</td>
+        <td>{{ d }}</td>
+        <td>{{ f }}</td>
+    </tr>
+
+</table><br><br>
+Distinction percentage   <b>{{ distinction_percentage }}</b><br>
+First class percentage   <b>{{ first_class_percentage }}</b><br>
+Pass percentage   <b>{{ pass_percentage }}</b>
+</body>
+</html>

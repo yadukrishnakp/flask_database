@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add mark</title>
+</head>
+<body>
+<form action="/api/student/added/marks" method="post">
+    <h2>Add student details</h2>
+    Roll no<input type="text" autocomplete="roll_no" value="{{stud}}" readonly name="student_roll_no" required><br><br>
+    Mark<input type="text" maxlength="3" max="100" min="0" name="student_mark" required><br><br>
+    <input type="submit" value="Add">
+</form>
+</body>
+</html>

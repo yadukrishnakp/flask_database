@@ -6,23 +6,53 @@
 </head>
 <body>
 {% if rows %}
-<h3>All students</h3>
+<h3><b>All students</b></h3>
+    <table border="1">
+        <tr>
+            <th>Roll number</th>
+            <th>Name</th>
+            <th>Date of birth</th>
+        </tr>
+
+        {% for row in rows  %}
+        <tr>
+            <td>{{ row[0] }}</td>
+            <td>{{ row[1] }}</td>
+            <td>{{ row[2] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endif %}
+
+
+
+{% if invalid %}
+<h3>{{invalid}}</h3>
+{% endif %}
+
+
+{% if success %}
+<h3>{{success}}</h3>
+{% endif %}
+
+
+{% if mark_exist %}
+<h3>{{mark_exist}}</h3>
+{% endif %}
+
+
+{% if student_mark %}
+<h3>Mark of student</h3>
 <table border="1">
     <tr>
         <th>Roll number</th>
-        <th>Name</th>
-        <th>Date of birth</th>
+        <th>Mark</th>
     </tr>
-
-    {% for row in rows  %}
     <tr>
-        <td>{{ row[0] }}</td>
-        <td>{{ row[1] }}</td>
-        <td>{{ row[2] }}</td>
+        <td>{{ student_mark[0] }}</td>
+        <td>{{ student_mark[1] }}</td>
     </tr>
-    {% endfor %}
 {% endif %}
-
 </table>
 </body>
 </html>
