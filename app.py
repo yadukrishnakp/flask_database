@@ -41,7 +41,7 @@ def student():
         return render_template('result.html', rows=rows)
 
 
-# checking student is in database
+# checking student is in database, if student in database then mark can add
 @app.route('/api/student/<roll_no>/marks/add/', methods=['GET', 'POST'])
 def add_mark(roll_no):
     with sqlite3.connect("student.db") as conn:
