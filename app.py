@@ -88,7 +88,7 @@ def show_mark(roll_no):
             return render_template('result.html', invalid='invalid input, check roll number')
 
 
-# fetching mark details of all students, sorting on marks into grades and calculating distinction percentage,
+# fetching mark details of all students, sorting on marks into grades and also calculating distinction percentage,
 # first class percentage and pass percentage
 @app.route('/api/student/results/', methods=['GET', 'POST'])
 def show_final_mark():
